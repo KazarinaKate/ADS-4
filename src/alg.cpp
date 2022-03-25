@@ -28,11 +28,9 @@ int cbinsearch(int* arr, int size, int value) {
                 count++;
                 left++;
             }
-        }
-        else if (arr[a] > value) {
+        } else if (arr[a] > value) {
             right = a;
-        }
-        else {
+        } else {
             left = a + 1;
         }
     }
@@ -77,6 +75,5 @@ int countPairs3(int *arr, int len, int value) {
             count = count + cbinsearch(arr, len, el);
         }
     }
-    cout << count << endl;
     return count;
 }
